@@ -1863,7 +1863,7 @@ class ActiveTestScreenController extends GetxController {
             // print('BATTRY IS LOW ${eightAndNineIndex}');
           } else {
             isBattery.value = false;
-            syncStatus(event: 'Battery Full', device: _connectedDevice?.name??'', status: 'Active');
+            // syncStatus(event: 'Battery Full', device: _connectedDevice?.name??'', status: 'Active');
 
             // print('BATTRY IS FULL ${eightAndNineIndex}');
           }
@@ -1895,7 +1895,7 @@ class ActiveTestScreenController extends GetxController {
 
           } else {
             isCalibration.value = false;
-            syncStatus(event: 'Calibration Ok', device: _connectedDevice?.name??'', status: 'Active');
+            // syncStatus(event: 'Calibration Ok', device: _connectedDevice?.name??'', status: 'Active');
 
             // print('all ok == $numberB');
           }
@@ -1994,7 +1994,7 @@ class ActiveTestScreenController extends GetxController {
             // print('BATTRY IS LOW ${eightAndNineIndex}');
           } else {
             isBattery.value = false;
-            syncStatus(event: 'Battery Full', device: _connectedDevice?.name??'', status: 'Active');
+            // syncStatus(event: 'Battery Full', device: _connectedDevice?.name??'', status: 'Active');
 
             // print('BATTRY IS FULL ${eightAndNineIndex}');
           }
@@ -2025,7 +2025,7 @@ class ActiveTestScreenController extends GetxController {
 
           } else {
             isCalibration.value = false;
-            syncStatus(event: 'Calibration Ok', device: _connectedDevice?.name??'', status: 'Active');
+            // syncStatus(event: 'Calibration Ok', device: _connectedDevice?.name??'', status: 'Active');
 
             // print('all ok == $numberB');
           }

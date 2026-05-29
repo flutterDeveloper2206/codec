@@ -170,7 +170,7 @@ class _ActiveTestScreenState extends State<ActiveTestScreen>
                                 Column(
                                   children: [
                                     Text(
-                                      'V 1.38',
+                                      'V 1.39',
                                       style: CTC.style(15,
                                           fontWeight: FontWeight.w600,
                                           fontColor: ColorConstant
