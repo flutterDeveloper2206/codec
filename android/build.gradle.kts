@@ -35,6 +35,25 @@ subprojects {
         val android = project.extensions.findByName("android")
         if (android != null) {
             try {
+                val getCompileSdk = android.javaClass.getMethod("getCompileSdk")
+                val setCompileSdk = android.javaClass.getMethod("setCompileSdk", Int::class.java)
+                val currentSdk = getCompileSdk.invoke(android) as? Int
+                if (currentSdk == null || currentSdk < 36) {
+                    setCompileSdk.invoke(android, 36)
+                }
+            } catch (e: Exception) {
+                try {
+                    val getCompileSdkVersion = android.javaClass.getMethod("getCompileSdkVersion")
+                    val setCompileSdkVersion = android.javaClass.getMethod("setCompileSdkVersion", Int::class.java)
+                    val currentSdk = getCompileSdkVersion.invoke(android) as? Int
+                    if (currentSdk == null || currentSdk < 36) {
+                        setCompileSdkVersion.invoke(android, 36)
+                    }
+                } catch (e2: Exception) {
+                    // Ignore
+                }
+            }
+            try {
                 val getNamespace = android.javaClass.getMethod("getNamespace")
                 val setNamespace = android.javaClass.getMethod("setNamespace", String::class.java)
                 val currentNamespace = getNamespace.invoke(android)
